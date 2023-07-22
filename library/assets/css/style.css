@@ -1,10 +1,13 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .main-container {
     width: 1440px;
     margin: 0 auto;
+    border: 1px solid #000;
 }
 
 .header {
@@ -149,4 +152,136 @@
 .favorites {
     height: 1439px;
     padding: 20px 20px 40px;
+}
+
+.favorites-text {
+    margin-top: 40px;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.favorites-filters-wrapper{
+    margin-top: 40px;
+}
+
+.favorites-filters-wrapper input[type='radio'] + label:not(:last-child){
+    margin-right: 90px;
+}
+
+.favorites-filter-text {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.favorites-filter-text__checked {
+    font-weight: 700;
+}
+
+.favorites input[type='radio'] {
+    margin-right: 20px;
+    width: 17px;
+    height: 17px;
+    stroke-width: 2px;
+    stroke: #000;
+}
+.favorites input[type=radio]:checked {
+    accent-color: #000000;
+}
+
+.favorites-cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    margin-top: 40px;
+}
+
+.card {
+    min-width: 590px;
+    height: 555px;
+}
+
+.card:nth-child(2),
+.card:nth-child(4) {
+    padding-right: 60px;
+}
+
+.card-text {
+    position: absolute;
+    width: 550px;
+    height: 555px;
+    padding: 15px 0px 15px 20px;
+    border: 1px solid #000;
+}
+
+.card__label {
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.card__title {
+    margin-top: 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card__author {
+    margin-top: 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.card__description {
+    margin-top: 20px;
+    padding-right: 175px;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 266.667% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.card__btn {
+    position: absolute;
+    width: 75px;
+    height: 30px;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card__poster {
+    position: relative;
+    top: 255px;
+    left: 390px;
 }
