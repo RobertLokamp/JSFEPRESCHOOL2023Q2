@@ -204,17 +204,17 @@
     margin-top: 40px;
 }
 
-.card {
+.book-card {
     min-width: 590px;
     height: 555px;
 }
 
-.card:nth-child(2),
-.card:nth-child(4) {
+.book-card:nth-child(2),
+.book-card:nth-child(4) {
     padding-right: 60px;
 }
 
-.card-text {
+.book-card-text {
     position: absolute;
     width: 550px;
     height: 555px;
@@ -222,7 +222,7 @@
     border: 1px solid #000;
 }
 
-.card__label {
+.book-card__label {
     color: #000;
     font-family: Forum;
     font-size: 20px;
@@ -232,7 +232,7 @@
     text-transform: capitalize;
 }
 
-.card__title {
+.book-card__title {
     margin-top: 20px;
     color: #000;
     font-family: Inter;
@@ -243,7 +243,7 @@
     text-transform: uppercase;
 }
 
-.card__author {
+.book-card__author {
     margin-top: 20px;
     color: #000;
     font-family: Inter;
@@ -254,7 +254,7 @@
     text-transform: capitalize;
 }
 
-.card__description {
+.book-card__description {
     margin-top: 20px;
     padding-right: 175px;
     color: #000;
@@ -267,7 +267,7 @@
     text-transform: capitalize;
 }
 
-.card__btn {
+.book-card__btn {
     position: absolute;
     width: 75px;
     height: 30px;
@@ -280,8 +280,92 @@
     letter-spacing: 1px;
 }
 
-.card__poster {
+.book-card__poster {
     position: relative;
     top: 255px;
     left: 390px;
+}
+
+.coffee-shop {
+    height: 781px;
+    padding: 20px 20px 40px 20px;
+}
+
+.coffee-shop__text {
+    margin-top: 40px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+}
+
+.coffee-shop__menu-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-card {
+    width: 482px;
+    height: 520px;
+}
+
+.menu-card__title {
+    color: #BB945F;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-card__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-top: 40px;
+}
+
+.menu-card__list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.menu-card__item-name {
+    width: 231px;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-card__text_align_right {
+    text-align: right;
+}
+
+.menu-card__divider {
+    width: 100px;
+    height: 1px;
+    background: #BB945F;
+}
+
+.menu-card__item-price {
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: capitalize;
 }
