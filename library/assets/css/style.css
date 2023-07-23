@@ -228,8 +228,18 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
+    line-height: 40px; /* 200% */
     letter-spacing: 2px;
     text-transform: capitalize;
+}
+
+
+.book-card__label::after {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: #BB945F;
+    content: '';
 }
 
 .book-card__title {
@@ -411,4 +421,208 @@
 .contacts__map {
     width: 696px;
     height: 414px;
+}
+
+.digital-cards {
+    height: 614px;
+    padding: 20px 20px 41px;
+}
+
+.digital-cards__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.find-card__title {
+    text-align: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+
+.find-card__form {
+    margin-top: 30px;
+    width: 600px;
+    height: 386px;
+    border: 3px solid #BB945F;
+    padding: 20px 20px 30px;
+}
+
+.find-card__input-container {
+    width: 560px;
+    height: 272px;
+    background: #BB945F;
+    padding: 20px 20px 25px;
+}
+
+.find-card__form-text {
+    color: #000;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+}
+
+.find-card__form-input {
+    display: block;
+    width: 520px;
+    height: 66px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #FFF;
+}
+
+.find-card__form-input:nth-of-type(2) {
+    margin-top: 25px;
+}
+
+.find-card__form-input[placeholder] {
+    padding: 8px 0 8px 20px;
+    color: #8E8E8E;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+}
+
+.find-card__form-btn {
+    display: block;
+    padding: 10px 40px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: #FFF;
+}
+
+.get-reader {
+    width: 456px;
+}
+
+.get-reader__title {
+    color: #000;
+    text-align: right;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+}
+
+.get-reader__form {
+    margin-top: 35px;
+}
+
+.get-reader__form-text {
+    color: #000;
+    text-align: right;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 0.4px;
+}
+
+.get-reader__form-btn {
+    margin-top: 44px;
+    float: right;
+    display: flex;
+    width: 75px;
+    height: 30px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: #FFF;
+}
+
+.get-reader__form-btn:nth-of-type(2) {
+    margin-right: 20px;
+}
+
+.footer {
+    height: 250px;
+    padding: 20px 20px 44px;
+    background: #0C0C0E;
+}
+
+.footer__upper-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__upper-wrapper-left {
+    width: 229px;
+}
+
+.footer__upper-text {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+}
+
+.footer-__icons-wrapper {
+    margin-top: 18px;
+}
+
+.footer__icon {
+    margin-right: 15px;
+}
+
+.footer__upper-wrapper-right {
+    width: 160px;
+    text-align: right;
+}
+
+.footer__upper-text:nth-of-type(2) {
+    margin-top: 10px;
+}
+
+.footer__divider {
+    height: 1px;
+    margin-top: 30px;
+    background: #FFF;
+}
+
+.footer__lower-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+}
+
+.footer__lower-text {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 100% */
+    letter-spacing: 2px;
 }
