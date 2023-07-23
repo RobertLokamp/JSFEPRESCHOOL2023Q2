@@ -36,13 +36,13 @@
     gap: 40px;
 }
 
-.navigation .navigation-list {
+.navigation__list {
     display: inline-flex;
     align-items: flex-start;
     gap: 30px;
 }
 
-.navigation .navigation-list .navigation-list-item{
+.navigation__list-item{
     color: #FFF;
     font-family: Inter;
     font-size: 20px;
@@ -59,14 +59,14 @@
     background: url(../img/welcome-bg.jpg) center center/cover no-repeat;
 }
 
-.welcome .welcome-text-block {
+.welcome__text-block {
     display: block;
     width: 600px;
     height: 220px;
     background: #0C0C0E;
 }
 
-.welcome .welcome-text {
+.welcome__text {
     padding: 35px 40px;
     color: #FFF;
     text-align: center;
@@ -79,7 +79,7 @@
     text-transform: uppercase;
 }
 
-.section-title {
+.section-header__title {
     text-align: center;
     margin-bottom: 0px;
     color: #0C0C0E;
@@ -92,7 +92,7 @@
     text-transform: capitalize;
 }
 
-.section-divider {
+.section-header__divider {
     margin: 0 auto;
     width: 50px;
     height: 1px;
@@ -105,7 +105,7 @@
     padding: 20px 20px 40px;
 }
 
-.about .about-text {
+.about__text {
     margin-top: 40px;
     color: #000;
     text-align: center;
@@ -116,36 +116,36 @@
     line-height: 40px; /* 200% */
 }
 
-.about .about-slider {
+.photo-slider {
     margin-top: 20px;
 }
 
-.about .about-slider .slides-wrapper {
+.photo-slider__slides-wrapper {
     display: flex;
     justify-content: space-between;
-    flex-shrink: 0;
 }
 
-.about .about-slider .about-slider-photo {
+.photo-slider__item {
     width: 450px;
     height: 560px;
 }
 
-.about .about-slider .dots-wrapper {
+.photo-slider__dots-wrapper {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 40px;
 }
 
-.about .about-slider .about-slider-dot {
+.photo-slider__dot {
     width:16px;
     height: 16px;
     background-color: #0C0C0E;
     border-radius: 100%;
+    cursor: pointer;
 }
 
-.about .about-slider .about-slider-dot__active {
+.photo-slider__dot_active {
     background-color: #BB945F;
 }
 
@@ -154,7 +154,7 @@
     padding: 20px 20px 40px;
 }
 
-.favorites-text {
+.favorites__text {
     margin-top: 40px;
     color: #000;
     font-family: Inter;
@@ -164,15 +164,15 @@
     line-height: normal;
 }
 
-.favorites-filters-wrapper{
+.favorites__filters-wrapper {
     margin-top: 40px;
 }
 
-.favorites-filters-wrapper input[type='radio'] + label:not(:last-child){
-    margin-right: 90px;
+.favorites__filters-wrapper input[type='radio'] + label:not(:last-child){
+    margin-right: 84px;
 }
 
-.favorites-filter-text {
+.favorites__filter-text {
     color: #000;
     font-family: Inter;
     font-size: 20px;
@@ -181,22 +181,22 @@
     line-height: normal;
 }
 
-.favorites-filter-text__checked {
+.favorites__filter-text_checked {
     font-weight: 700;
 }
 
-.favorites input[type='radio'] {
+.favorites__filters-wrapper input[type='radio'] {
     margin-right: 20px;
     width: 17px;
     height: 17px;
     stroke-width: 2px;
     stroke: #000;
 }
-.favorites input[type=radio]:checked {
+.favorites__filters-wrapper input[type=radio]:checked {
     accent-color: #000000;
 }
 
-.favorites-cards-wrapper {
+.favorites__cards-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -234,10 +234,11 @@
 }
 
 
-.book-card__label::after {
+.book-card__label:after {
     display: block;
     width: 60px;
     height: 1px;
+    margin-top: -3px;
     background: #BB945F;
     content: '';
 }
@@ -249,24 +250,25 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
+    line-height: 40px; /* 266.667% */
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .book-card__author {
-    margin-top: 20px;
     color: #000;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
+    line-height: 40px; /* 266.667% */
     letter-spacing: 2px;
     text-transform: capitalize;
 }
 
 .book-card__description {
     margin-top: 20px;
-    padding-right: 175px;
+    padding-right: 170px;
     color: #000;
     font-family: Inter;
     font-size: 15px;
@@ -278,26 +280,37 @@
 }
 
 .book-card__btn {
-    position: absolute;
+    position: relative;
     width: 75px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
     height: 30px;
+    top: 225px;
+    left: 20px;
     color: #0C0C0E;
     text-align: center;
     font-family: Inter;
     font-size: 10px;
     font-style: normal;
     font-weight: 700;
+    line-height: normal;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.book-card__btn_own {
+    border-color: #BB945F;
+    color: #BB945F;
 }
 
 .book-card__poster {
     position: relative;
     top: 255px;
-    left: 390px;
+    left: 315px;
 }
 
 .coffee-shop {
-    height: 781px;
+    height: 841px;
     padding: 20px 20px 40px 20px;
 }
 
@@ -319,27 +332,19 @@
     justify-content: space-between;
 }
 
-.menu-card {
-    width: 482px;
-    height: 520px;
-}
-
 .menu-card__title {
     color: #BB945F;
     font-family: Forum;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
+    line-height: 40px; /* 200% */
     letter-spacing: 2px;
     text-transform: capitalize;
 }
 
 .menu-card__list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
-    margin-top: 40px;
 }
 
 .menu-card__list-item {
@@ -347,15 +352,17 @@
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    margin-top: 40px;
 }
 
 .menu-card__item-name {
-    width: 231px;
+    width: 208px;
     color: #000;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
+    line-height: 40px; /* 200% */
     letter-spacing: 2px;
     text-transform: capitalize;
 }
@@ -376,6 +383,7 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
+    line-height: 40px; /* 200% */
     letter-spacing: 2px;
     text-transform: capitalize;
 }
@@ -397,6 +405,7 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
+    line-height: 40px; /* 200% */
     letter-spacing: 2px;
 }
 
@@ -411,7 +420,8 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    letter-spacing: 2px;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2.3px;
 }
 
 .contacts-info__text:nth-of-type(1) {
@@ -466,6 +476,7 @@
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
+    line-height: 50px; /* 166.667% */
     letter-spacing: 0.6px;
 }
 
@@ -496,7 +507,7 @@
     display: block;
     padding: 10px 40px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 18px;
     border-radius: 2px;
     border: 1px solid #0C0C0E;
     color: #0C0C0E;
@@ -505,29 +516,29 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
+    line-height: normal;
     letter-spacing: 1px;
     background-color: #FFF;
+    cursor: pointer;
 }
 
-.get-reader {
-    width: 456px;
+.profile-promo {
+    width: 470px;
 }
 
-.get-reader__title {
+.profile-promo__title {
     color: #000;
     text-align: right;
     font-family: Forum;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;
     letter-spacing: 0.6px;
 }
 
-.get-reader__form {
+.profile-promo__form-text {
     margin-top: 35px;
-}
-
-.get-reader__form-text {
     color: #000;
     text-align: right;
     font-family: Inter;
@@ -535,11 +546,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
-    letter-spacing: 0.4px;
 }
 
-.get-reader__form-btn {
-    margin-top: 44px;
+.profile-promo__form-btn {
+    margin-top: 33px;
     float: right;
     display: flex;
     width: 75px;
@@ -555,11 +565,13 @@
     font-size: 10px;
     font-style: normal;
     font-weight: 700;
+    line-height: normal;
     letter-spacing: 1px;
     background-color: #FFF;
+    cursor: pointer;
 }
 
-.get-reader__form-btn:nth-of-type(2) {
+.profile-promo__form-btn:nth-of-type(2) {
     margin-right: 20px;
 }
 
@@ -583,8 +595,9 @@
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 20px; /* 133.333% */
+    letter-spacing: 0.2px;
 }
 
 .footer-__icons-wrapper {
@@ -592,7 +605,7 @@
 }
 
 .footer__icon {
-    margin-right: 15px;
+    margin-right: 12px;
 }
 
 .footer__upper-wrapper-right {
@@ -625,4 +638,9 @@
     font-weight: 400;
     line-height: 20px; /* 100% */
     letter-spacing: 2px;
+}
+
+.footer__lower-text:first-child {
+    width: 160px;
+    text-align: left;
 }
