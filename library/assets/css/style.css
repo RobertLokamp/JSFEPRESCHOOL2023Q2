@@ -159,6 +159,7 @@ html {
     background-color: #FFF;
     cursor: pointer;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .photo-slider__dot-btn {
@@ -329,6 +330,8 @@ html {
     top: 228px;
     left: 20px;
     width: 75px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
     height: 30px;
     background-color: #FFF;
     cursor: pointer;
@@ -342,6 +345,12 @@ html {
     color: #0C0C0E;
     text-align: center;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.book-card__btn_own {
+    border-color: #BB945F;
+    color: #BB945F;
 }
 
 .book-card__btn:disabled {
@@ -683,7 +692,7 @@ html {
 }
 
 .footer__icon {
-    margin-right: 15px;
+    margin-right: 12px;
 }
 
 .footer__upper-wrapper-right {
