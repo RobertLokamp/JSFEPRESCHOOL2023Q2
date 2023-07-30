@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
@@ -12,29 +15,23 @@
 </head>
 <body>
   <div class="main-container">
-    <header>
-      <div class="header">
-        <h1 class="main-title">Brooklyn Public Library</h1>
-        <div class="navigation-and-user-wrapper">
-          <nav class="navigation">
-            <ul class="navigation__list">
-              <li><a href="" class="navigation__list-item">About</a></li>
-              <li><a href="" class="navigation__list-item">Favorites</a></li>
-              <li><a href="" class="navigation__list-item">Coffee shop</a></li>
-              <li><a href="" class="navigation__list-item">Contacts</a></li>
-              <li><a href="" class="navigation__list-item">Library Card</a></li>
-            </ul>
-          </nav>
-          <div class="user"><a href="#"><img src="assets/img/icon_profile.svg" alt="user logo"></a></div>
-        </div>
-      </div>
+    <header class="header">
+      <h1 class="main-title">Brooklyn Public Library</h1>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li><a href="#about" class="navigation__list-item">About</a></li>
+            <li><a href="#favorites" class="navigation__list-item">Favorites</a></li>
+            <li><a href="#coffee_shop" class="navigation__list-item">Coffee shop</a></li>
+            <li><a href="#contacts" class="navigation__list-item">Contacts</a></li>
+            <li><a href="#library_card" class="navigation__list-item">Library Card</a></li>
+          </ul>
+        </nav>
+        <div class="user"><img src="assets/img/icons/icon_profile.svg" alt="user logo"></div>
     </header>
   
     <main class="main">
-      <section class="welcome">
-        <div class="welcome__text-block">
-          <p class="welcome__text">Welcome <br> to the Brooklyn <br> Library</p>
-        </div>
+      <section class="welcome" id="welcome">
+        <p class="welcome__text">Welcome <br> to the Brooklyn <br> Library</p>
       </section>
 
       <section class="about">
@@ -50,31 +47,45 @@
             <img src="./assets/img/slides/third_slide.jpg" alt="third slide" class="photo-slider__item">
           </div>
           <div class="photo-slider__dots-wrapper">
-            <div class="photo-slider__dot photo-slider__dot_active"></div>
-            <div class="photo-slider__dot"></div>
-            <div class="photo-slider__dot"></div>
+            <div class="photo-slider__dot">
+              <button class="photo-slider__dot-btn photo-slider__dot-btn_active"></button>
+            </div>
+            <div class="photo-slider__dot">
+              <button class="photo-slider__dot-btn"></button>
+            </div>
+            <div class="photo-slider__dot">
+              <button class="photo-slider__dot-btn"></button>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="favorites">
+      <section class="favorites" id="favorites">
         <div class="section-header">
-          <div class="section-header__title">Favorites</div>
+          <h2 class="section-header__title">Favorites</h2>
           <div class="section-header__divider"></div>
         </div>
         <p class="favorites__text">Pick favorites of season</p>
         <div class="favorites__filters-wrapper">
-          <input type="radio" id="winter" name="season" value="winter" checked>
-          <label for="winter" class="favorites__filter-text favorites__filter-text_checked">Winter</label>
+          <div class="favorites__filter">
+            <input type="radio" id="winter" class="favorites__filters-input" name="season" value="winter" checked>
+            <label for="winter" class="favorites__filter-text favorites__filter-text_checked">Winter</label>
+          </div>
 
-          <input type="radio" id="spring" name="season" value="spring">
-          <label for="spring" class="favorites__filter-text">Spring</label>
+          <div class="favorites__filter">
+            <input type="radio" id="spring" class="favorites__filters-input" name="season" value="spring">
+            <label for="spring" class="favorites__filter-text">Spring</label>
+          </div>
 
-          <input type="radio" id="summer" name="season" value="summer">
-          <label for="summer" class="favorites__filter-text">Summer</label>
+          <div class="favorites__filter">
+            <input type="radio" id="summer" class="favorites__filters-input" name="season" value="summer">
+            <label for="summer" class="favorites__filter-text">Summer</label>
+          </div>
 
-          <input type="radio" id="autumn" name="season" value="autumn">
-          <label for="autumn" class="favorites__filter-text">Autumn</label>
+          <div class="favorites__filter">
+            <input type="radio" id="autumn" class="favorites__filters-input" name="season" value="autumn">
+            <label for="autumn" class="favorites__filter-text">Autumn</label>
+          </div>
         </div>
         
         <div class="favorites__cards-wrapper">
@@ -87,7 +98,7 @@
                 An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.
               </p>
             </div>
-            <button class="book-card__btn">Buy</button>
+            <button class="book-card__btn library-btn">Buy</button>
             <img src="./assets/img/posters/winter1.png" alt="The Book Eaters poster" class="book-card__poster">
           </div>
           <div class="book-card">
@@ -97,7 +108,7 @@
               <p class="book-card__author">By Rachel Harrison</p>
               <p class="book-card__description">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
             </div>
-            <button class="book-card__btn">Buy</button>
+            <button class="book-card__btn library-btn">Buy</button>
             <img src="./assets/img/posters/winter2.png" alt="Cackle poster" class="book-card__poster">
           </div>
           <div class="book-card">
@@ -107,7 +118,7 @@
               <p class="book-card__author">By Rachel Harrison</p>
               <p class="book-card__description">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
             </div>
-            <button class="book-card__btn">Buy</button>
+            <button class="book-card__btn library-btn">Buy</button>
             <img src="./assets/img/posters/winter3.png" alt="Cackle poster" class="book-card__poster">
           </div>
           <div class="book-card">
@@ -117,85 +128,181 @@
               <p class="book-card__author">By Clive Irving</p>
               <p class="book-card__description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
             </div>
-            <button class="book-card__btn book-card__btn_own">Own</button>
+            <button disabled class="book-card__btn library-btn">Own</button>
             <img src="./assets/img/posters/winter4.png" alt="Cackle poster" class="book-card__poster">
           </div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">The Body</h3>
+              <p class="book-card__author">By Stephen King</p>
+              <p class="book-card__description">Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger and loss of innocence that is youth.</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/spring1.png" alt="The Body poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">Carry: A Memoir of Survival on Stolen Land</h3>
+              <p class="book-card__author">By Toni Jenson</p>
+              <p class="book-card__description">This memoir about the author's relationship with gun violence feels both expansive and intimate, resulting in a lyrical indictment of the way things are.</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/spring2.png" alt="Carry: A Memoir of Survival on Stolen Land poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">Days of Distraction</h3>
+              <p class="book-card__author">By Alexandra Chang</p>
+              <p class="book-card__description">A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and belonging, all in one form-defying package of spare prose.</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/spring3.png" alt="Days of Distraction poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">Dominicana</h3>
+              <p class="book-card__author">By Angie Cruz</p>
+              <p class="book-card__description">A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
+            </div>
+            <button disabled class="book-card__btn library-btn">Own</button><img src="./assets/img/posters/spring4.png" alt="Dominicana poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">Crude: A Memoir</h3>
+              <p class="book-card__author">By Pablo Fajardo & ​​Sophie Tardy-Joubert</p>
+              <p class="book-card__description">Drawing and color by Damien Roudeau | This book illustrates the struggles of a group of indigenous Ecuadoreans as they try to sue the ChevronTexaco company for damage their oil fields did to the Amazon and her people</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/summer1.png" alt="Crude: A Memoir poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">Let My People Go Surfing</h3>
+              <p class="book-card__author">By Yvon Chouinard</p>
+              <p class="book-card__description">Chouinard—climber, businessman, environmentalist—shares tales of courage and persistence from his experience of founding and leading Patagonia, Inc. Full title: Let My People Go Surfing: The Education of a Reluctant Businessman, Including 10 More Years of Business Unusual.</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/summer2.png" alt="Let My People Go Surfing poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">The Octopus Museum: Poems</h3>
+              <p class="book-card__author">By Brenda Shaughnessy</p>
+              <p class="book-card__description">This collection of bold and scathingly beautiful feminist poems imagines what comes after our current age of environmental destruction, racism, sexism, and divisive politics.</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/summer3.png" alt="The Octopus Museum: Poems poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">Shark Dialogues: A Novel</h3>
+              <p class="book-card__author">By Kiana Davenport</p>
+              <p class="book-card__description">An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and healers.</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/summer4.png" alt="Shark Dialogues: A Novel poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">Casual Conversation</h3>
+              <p class="book-card__author">By Renia White</p>
+              <p class="book-card__description">White's impressive debut collection takes readers through and beyond the concepts of conversation and the casual - both what we say to each other and what we don't, examining the possibilities around how we construct and communicate identity. </p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/autumn1.png" alt="Casual Conversation poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">The Great Fire</h3>
+              <p class="book-card__author">By Lou Ureneck</p>
+              <p class="book-card__description">The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/autumn2.png" alt="The Great Fire poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">Rickey: The Life and Legend</h3>
+              <p class="book-card__author">By Howard Bryant</p>
+              <p class="book-card__description">With the fall rolling around, one can't help but think of baseball's postseason coming up! And what better way to prepare for it than reading the biography of one of the game's all-time greatest performers, the Man of Steal, Rickey Henderson?</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/autumn3.png" alt="Rickey: The Life and Legend poster" class="book-card__poster"></div>
+          <div class="book-card book-card_hide">
+            <div class="book-card-text">
+              <p class="book-card__label">Staff Picks</p>
+              <h3 class="book-card__title">Slug: And Other Stories</h3>
+              <p class="book-card__author">By Megan Milks</p>
+              <p class="book-card__description">Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.</p>
+            </div>
+            <button class="book-card__btn library-btn">Buy</button><img src="./assets/img/posters/autumn4.png" alt="Slug: And Other Stories poster" class="book-card__poster"></div>
         </div>
       </section>
 
-      <section class="coffee-shop">
+      <section class="coffee-shop" id="coffee_shop">
         <div class="section-header">
-          <div class="section-header__title">Coffee Shop</div>
+          <h2 class="section-header__title">Coffee Shop</h2>
           <div class="section-header__divider"></div>
         </div>
         <p class="coffee-shop__text">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. 
-          you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
+          You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
         <div class="coffee-shop__menu-wrapper">
           <div class="menu-card">
             <h3 class="menu-card__title">Coffee & Tea</h3>
             <ul class="menu-card__list">
-              <li class="menu-card__list-item">
+              <li class="menu-card__left-list-item">
                 <p class="menu-card__item-name">Cold Brew Coffee</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$3</p>
               </li>
-              <li class="menu-card__list-item">
+              <li class="menu-card__left-list-item">
                 <p class="menu-card__item-name">French Press Pot</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$5</p>
               </li>
-              <li class="menu-card__list-item">
+              <li class="menu-card__left-list-item">
                 <p class="menu-card__item-name">Espresso</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$2</p>
               </li>
-              <li class="menu-card__list-item">
+              <li class="menu-card__left-list-item">
                 <p class="menu-card__item-name">Cappuccino</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$4</p>
               </li>
-              <li class="menu-card__list-item">
+              <li class="menu-card__left-list-item">
                 <p class="menu-card__item-name">Hot tea</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$2</p>
               </li>
-              <li class="menu-card__list-item">
+              <li class="menu-card__left-list-item">
                 <p class="menu-card__item-name">Cold tea</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$2</p>
               </li>
             </ul>
           </div>
-          <div class="menu-card">
-            <h3 class="menu-card__title menu-card__text_align_right">Desserts & Cakes</h3>
+          <div class="menu-card_right">
+            <h3 class="menu-card__title">Desserts & Cakes</h3>
             <ul class="menu-card__list">
-              <li class="menu-card__list-item">
-                <p class="menu-card__item-name menu-card__text_align_right">Forest Gateau</p>
+              <li class="menu-card__right-list-item">
+                <p class="menu-card__item-name">Forest Gateau</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$16</p>
               </li>
-              <li class="menu-card__list-item">
-                <p class="menu-card__item-name menu-card__text_align_right">Blue Moon</p>
+              <li class="menu-card__right-list-item">
+                <p class="menu-card__item-name">Blue Moon</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$16</p>
               </li>
-              <li class="menu-card__list-item">
-                <p class="menu-card__item-name menu-card__text_align_right">Truffle Cake</p>
+              <li class="menu-card__right-list-item">
+                <p class="menu-card__item-name">Truffle Cake</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$15</p>
               </li>
-              <li class="menu-card__list-item">
-                <p class="menu-card__item-name menu-card__text_align_right">Chocolate Cake</p>
+              <li class="menu-card__right-list-item">
+                <p class="menu-card__item-name">Chocolate Cake</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$18</p>
               </li>
-              <li class="menu-card__list-item">
-                <p class="menu-card__item-name menu-card__text_align_right">Poet’s Dream Cake</p>
+              <li class="menu-card__right-list-item">
+                <p class="menu-card__item-name">Poet’s Dream Cake</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$16</p>
               </li>
-              <li class="menu-card__list-item">
-                <p class="menu-card__item-name menu-card__text_align_right">Pineapple Cake</p>
+              <li class="menu-card__right-list-item">
+                <p class="menu-card__item-name">Pineapple Cake</p>
                 <div class="menu-card__divider"></div>
                 <p class="menu-card__item-price">$14</p>
               </li>
@@ -204,46 +311,46 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="section-header">
-          <div class="section-header__title">Our Contacts</div>
+          <h2 class="section-header__title">Our Contacts</h2>
           <div class="section-header__divider"></div>
         </div>
         <div class="contacts__wrapper">
           <div class="contacts-info">
-            <h3 class="contacts-info__title">For all Library inquiries:</h3>
-            <p class="contacts-info__text">Please call (617) 730-2370</p>
-            <p class="contacts-info__text">For TTY service, please call (617) 730-2370</p>
-            <p class="contacts-info__text">Putterham Library: (617) 730-2385</p>
+            <h3 class="contacts-info__title">For All Library Inquiries:</h3>
+            <p class="contacts-info__text">Please Call <a href="tel:(617) 730-2370" class="contacts-info__link">(617) 730-2370</a></p>
+            <p class="contacts-info__text">For TTY Service, Please Call <a href="tel:(617) 730-2370" class="contacts-info__link">(617) 730-2370</a></p>
+            <p class="contacts-info__text">Putterham Library: <a href="tel:(617) 730-2385" class="contacts-info__link">(617) 730-2385</a></p>
             <h3 class="contacts-info__title">Senior Staff</h3>
-            <p class="contacts-info__text">Library Director: <b>Amanda Hirst</b></p>
+            <p class="contacts-info__text">Library Director: <a href="mailto:AmandaHirst@gmail.com" class="contacts-info__link"><b>Amanda Hirst</b></a></p>
           </div>
           <img src="./assets/img/map.png" alt="map" class="contacts__map">
         </div>
       </section>
 
-      <section class="digital-cards">
+      <section class="library-cards" id="library_card">
         <div class="section-header">
-          <div class="section-header__title">Digital Library Cards</div>
+          <h2 class="section-header__title">Digital Library Cards</h2>
           <div class="section-header__divider"></div>
         </div>
-        <div class="digital-cards__wrapper">
+        <div class="library-cards__wrapper">
           <div class="find-card">
             <h3 class="find-card__title">Find your Library card</h3>
-            <form action="" class="find-card__form">
+            <form class="find-card__form">
               <div class="find-card__input-container">
                 <p class="find-card__form-text">Brooklyn Public Library</p>
-                <input type="text" class="find-card__form-input" placeholder="Reader's name">
-                <input type="text" class="find-card__form-input" placeholder="Card number">
+                <input type="text" class="find-card__form-input" pattern="^[a-zA-Z]+$" placeholder="Reader's name" >
+                <input type="text" class="find-card__form-input" pattern="^[0-9\-]+$" placeholder="Card number">
               </div>
-              <button class="find-card__form-btn">Check the card</button>
+              <button class="find-card__form-btn library-btn">Check the card</button>
             </form>
           </div>
           <div class="profile-promo">
             <h3 class="profile-promo__title">Get a reader card</h3>
             <p class="profile-promo__form-text">You will be able to see a reader card after logging into account or you can register a new account</p>
-            <button class="profile-promo__form-btn">Log in</button>
-            <button class="profile-promo__form-btn">Sign Up</button>
+            <button class="profile-promo__form-btn library-btn">Log in</button>
+            <button class="profile-promo__form-btn library-btn">Sign Up</button>
           </div>
         </div>
       </section>
@@ -252,14 +359,21 @@
     <footer class="footer">
       <div class="footer__upper-wrapper">
         <div class="footer__upper-wrapper-left">
-          <p class="footer__upper-text">
+          <a href="https://www.google.com/maps/search/286+Cadman+Plaza,+New+York,+NY+11238,+United+States/@40.6956377,-73.9932709,17z/data=!3m1!4b1?entry=ttu" class="footer__upper-text footer-links">
             286 Cadman Plaza, New York,
-            NY 11238, United States</p>
-          <div class="footer-__icons-wrapper">
-            <a href=""><img src="./assets/img/contacts/twitter.svg" alt="twitter icon" class="footer__icon"></a>
-            <a href=""><img src="./assets/img/contacts/instagram.svg" alt="instagram icon" class="footer__icon"></a>
-            <a href=""><img src="./assets/img/contacts/facebook.svg" alt="facebook icon" class="footer__icon"></a>
-          </div>
+            NY 11238, United States
+          </a>
+          <ul class="footer__icons-list">
+            <li class="footer__icons-list-item">
+              <a href="https://twitter.com/bklynlibrary"><img src="./assets/img/contacts/twitter.svg" alt="twitter icon" class="footer__icon"></a>
+            </li>
+            <li class="footer__icons-list-item">
+              <a href="https://www.instagram.com/bklynlibrary/"><img src="./assets/img/contacts/instagram.svg" alt="instagram icon" class="footer__icon"></a>
+            </li>
+            <li class="footer__icons-list-item">
+              <a href="https://www.facebook.com/BrooklynPublicLibraryFamily"><img src="./assets/img/contacts/facebook.svg" alt="facebook icon" class="footer__icon"></a>
+            </li>
+          </ul>
         </div>
         <div class="footer__upper-wrapper-right">
           <p class="footer__upper-text">
@@ -274,11 +388,13 @@
       <div class="footer__divider"></div>
       <div class="footer__lower-wrapper">
         <p class="footer__lower-text">2023</p>
-        <p class="footer__lower-text">The Rolling Scopes School</p>
-        <p class="footer__lower-text">RobertLokamp</p>
+        <a href="https://rs.school/js-stage0/" class="footer__lower-text footer-links">The Rolling Scopes School</a>
+        <a href="https://github.com/RobertLokamp/" class="footer__lower-text footer-links">Ivan</a>
       </div>
     </footer>
   </div>
+
+  <script src="index.js"></script>
 
 </body>
 </html>
