@@ -160,7 +160,6 @@ html {
     background-color: #FFF;
     cursor: pointer;
     border-radius: 100%;
-    cursor: pointer;
 }
 
 .photo-slider__dot-btn {
@@ -196,10 +195,11 @@ html {
     justify-content: flex-start;
     position: relative;
     right: 5px;
-    margin-top: 34px;
+    margin-top: 35px;
 }
 
 .favorites__filter {
+    display: flex;
     width: 130px;
     padding: 5px;
 }
@@ -217,6 +217,8 @@ html {
 }
 
 .favorites__filter-text {
+    display: block;
+    padding-left: 20px;
     cursor: pointer;
     font-size: 20px;
     font-family: Inter;
@@ -225,17 +227,31 @@ html {
     color: #000;
 }
 
-.favorites__filters-input[type='radio'] {
-    stroke-width: 2px;
-    stroke: #000;
+.favorites__filter-input[type='radio'] {
+    appearance: none;
     width: 17px;
     height: 17px;
     margin-top: 5px;
-    margin-right: 17px;
     cursor: pointer;
 }
 
-.favorites__filters-input[type='radio']:checked + .favorites__filter-text {
+.favorites__filter-input[type='radio']:before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    padding: 3px;
+    border: 2px solid #000;
+    border-radius: 100%;
+}
+
+
+.favorites__filter-input[type='radio']:checked:before {
+    background-color: #000;
+    background-clip: content-box;
+}
+
+.favorites__filter-input[type='radio']:checked + .favorites__filter-text {
     font-weight: 700;
 }
 
@@ -244,7 +260,7 @@ html {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 40px;
-    margin-top: 33px;
+    margin-top: 36px;
 }
 
 .book-card {
@@ -331,8 +347,6 @@ html {
     top: 228px;
     left: 20px;
     width: 75px;
-    border-radius: 2px;
-    border: 1px solid #0C0C0E;
     height: 30px;
     background-color: #FFF;
     cursor: pointer;
@@ -346,7 +360,6 @@ html {
     color: #0C0C0E;
     text-align: center;
     letter-spacing: 1px;
-    cursor: pointer;
 }
 
 .book-card__btn_own {
