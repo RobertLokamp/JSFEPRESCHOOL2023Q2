@@ -136,7 +136,7 @@ html {
 }
 
 .about {
-    height: 837px;
+    min-height: 837px;
     padding: 20px 20px 40px;
 }
 
@@ -168,6 +168,7 @@ html {
 
 .photo-slider__arrow-btn {
     display: none;
+    margin-top: 35px;
     border: none;
     background-color: #FFF;
     cursor: pointer;
@@ -176,7 +177,8 @@ html {
 .photo-slider__dots-wrapper {
     display: flex;
     justify-content: center;
-    margin: 35px auto;
+    margin: 0 auto;
+    margin-top: 35px;
 }
 
 .photo-slider__dot {
@@ -582,9 +584,7 @@ html {
 }
 
 .find-card__form {
-    width: 600px;
-    height: 386px;
-    margin-top: 28px;
+    margin-top: 30px;
     padding: 20px 20px 30px;
     border: 3px solid #BB945F;
 }
@@ -798,7 +798,7 @@ html {
     }
 
     .photo-slider__slides-wrapper {
-        gap: 58px;
+        gap: 48px;
     }
 
     .photo-slider__item:not(:first-of-type) {
@@ -807,6 +807,10 @@ html {
 
     .photo-slider__arrow-btn {
         display: block;
+    }
+
+    .photo-slider__dots-wrapper {
+        margin-top: 20px;
     }
 
     .photo-slider__dot:nth-child(4),
