@@ -418,7 +418,7 @@ html {
 }
 
 .coffee-shop {
-    height: 841px;
+    min-height: 841px;
     padding: 20px 20px 40px 20px;
 }
 
@@ -505,7 +505,7 @@ html {
 }
 
 .contacts {
-    height: 575px;
+    min-height: 575px;
     padding: 20px 20px 40px 20px;
 }
 
@@ -560,7 +560,7 @@ html {
 }
 
 .library-cards {
-    height: 614px;
+    min-height: 614px;
     padding: 20px 20px 41px;
 }
 
@@ -681,11 +681,16 @@ html {
     letter-spacing: 0.4px;
 }
 
+.profile-promo__btns-wrapper {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
 .profile-promo__form-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    float: right;
     width: 75px;
     height: 30px;
     margin-top: 35px;
@@ -702,10 +707,6 @@ html {
     color: #0C0C0E;
     text-align: center;
     letter-spacing: 1px;
-}
-
-.profile-promo__form-btn:nth-of-type(2) {
-    margin-right: 20px;
 }
 
 .footer {
@@ -811,5 +812,53 @@ html {
     .photo-slider__dot:nth-child(4),
     .photo-slider__dot:nth-child(5) {
         display: flex;
+    }
+
+    .favorites__cards-wrapper {
+        justify-content: center;
+    }
+
+    .coffee-shop__menu-wrapper {
+        display: block;
+    }
+
+    .menu-card_right {
+        margin-top: 40px;
+    }
+
+    .menu-card__left-list-item {
+        justify-content: left;
+    }
+
+    .contacts__wrapper {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .contacts__map {
+        margin: 0 auto;
+    }
+
+    .library-cards__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .profile-promo {
+        width: 600px;
+    }
+
+    .profile-promo__title {
+        text-align: center;
+    }
+
+    .profile-promo__form-text {
+        text-align: center;
+    }
+
+    .profile-promo__btns-wrapper {
+        display: flex;
+        justify-content: center;
     }
 }
