@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <div class="main-container">
+  <!-- <div class="main-container"> -->
     <header class="header">
       <h1 class="main-title">Brooklyn Public Library</h1>
         <nav class="navigation">
@@ -27,6 +27,11 @@
           </ul>
         </nav>
         <div class="user"><img src="assets/img/icons/icon_profile.svg" alt="user logo"></div>
+        <div class="burger-menu">
+          <div class="burger-menu__line"></div>
+          <div class="burger-menu__line"></div>
+          <div class="burger-menu__line"></div>
+        </div>
     </header>
   
     <main class="main">
@@ -42,13 +47,29 @@
         <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
         <div class="photo-slider">
           <div class="photo-slider__slides-wrapper">
+            <button class="photo-slider__arrow-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="23" viewBox="0 0 14 23" fill="none">
+                <path d="M0.93934 10.4393C0.353553 11.0251 0.353553 11.9749 0.93934 12.5607L10.4853 22.1066C11.0711 22.6924 12.0208 22.6924 12.6066 22.1066C13.1924 21.5208 13.1924 20.5711 12.6066 19.9853L4.12132 11.5L12.6066 3.01472C13.1924 2.42893 13.1924 1.47919 12.6066 0.893398C12.0208 0.307611 11.0711 0.307611 10.4853 0.893398L0.93934 10.4393ZM3 10H2L2 13H3V10Z" fill="black"/>
+              </svg>
+            </button>
             <img src="./assets/img/slides/first_slide.jpg" alt="fisrt slide" class="photo-slider__item">
             <img src="./assets/img/slides/second_slide.jpg" alt="second slide" class="photo-slider__item">
             <img src="./assets/img/slides/third_slide.jpg" alt="third slide" class="photo-slider__item">
+            <button class="photo-slider__arrow-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="23" viewBox="0 0 14 23" fill="none">
+                <path d="M13.0607 12.5607C13.6464 11.9749 13.6464 11.0251 13.0607 10.4393L3.51472 0.893398C2.92893 0.307611 1.97919 0.307611 1.3934 0.893398C0.807611 1.47919 0.807611 2.42893 1.3934 3.01472L9.87868 11.5L1.3934 19.9853C0.807611 20.5711 0.807611 21.5208 1.3934 22.1066C1.97919 22.6924 2.92893 22.6924 3.51472 22.1066L13.0607 12.5607ZM11 13H12V10H11V13Z" fill="black"/>
+              </svg>
+            </button>
           </div>
           <div class="photo-slider__dots-wrapper">
             <div class="photo-slider__dot">
               <button class="photo-slider__dot-btn photo-slider__dot-btn_active"></button>
+            </div>
+            <div class="photo-slider__dot">
+              <button class="photo-slider__dot-btn"></button>
+            </div>
+            <div class="photo-slider__dot">
+              <button class="photo-slider__dot-btn"></button>
             </div>
             <div class="photo-slider__dot">
               <button class="photo-slider__dot-btn"></button>
@@ -392,7 +413,7 @@
         <a href="https://github.com/RobertLokamp/" class="footer__lower-text footer-links">Ivan</a>
       </div>
     </footer>
-  </div>
+  <!-- </div> -->
 
   <script src="index.js"></script>
 
