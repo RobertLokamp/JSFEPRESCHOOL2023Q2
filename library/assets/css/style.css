@@ -52,6 +52,7 @@ html {
     display: inline-flex;
     align-items: flex-start;
     gap: 30px;
+    list-style: none;
 }
 
 .navigation__list-item {
@@ -62,13 +63,17 @@ html {
     line-height: 50px; /* 250% */;
     color: #FFF;
     text-decoration: none;
-    list-style: none;
 }
 
 .user {
     flex-shrink: 0;
     margin-left: 40px;
     cursor: pointer;
+}
+
+.user:hover {
+    opacity: 75%;
+    transition: 0.7s;
 }
 
 .welcome {
@@ -137,7 +142,7 @@ html {
 .photo-slider__slides-wrapper {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .photo-slider__item {
@@ -147,7 +152,7 @@ html {
 
 .photo-slider__dots-wrapper {
     display: flex;
-    width: 84px;
+    justify-content: center;
     margin: 35px auto;
 }
 
@@ -155,7 +160,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:26px;
+    width: 26px;
     height: 26px;
     background-color: #FFF;
     cursor: pointer;
@@ -163,7 +168,7 @@ html {
 }
 
 .photo-slider__dot-btn {
-    width:16px;
+    width: 16px;
     height: 16px;
     background-color: #0C0C0E;
     cursor: pointer;
@@ -551,7 +556,7 @@ html {
 .find-card__form {
     width: 600px;
     height: 386px;
-    margin-top: 30px;
+    margin-top: 28px;
     padding: 20px 20px 30px;
     border: 3px solid #BB945F;
 }
@@ -604,7 +609,7 @@ html {
 .find-card__form-btn {
     display: block;
     margin: 0 auto;
-    margin-top: 16px;
+    margin-top: 17px;
     padding: 10px 40px;
     background-color: #FFF;
     cursor: pointer;
@@ -703,10 +708,16 @@ html {
 .footer__icons-list {
     display: inline-flex;
     margin-top: 18px;
+    list-style: none;
 }
 
 .footer__icon {
-    margin-right: 12px;
+    margin-right: 15px;
+}
+
+.footer__icon:hover {
+   opacity: 75%;
+   transition: 0.7s;
 }
 
 .footer__upper-wrapper-right {
