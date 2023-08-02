@@ -52,6 +52,7 @@ html {
     display: inline-flex;
     align-items: flex-start;
     gap: 30px;
+    list-style: none;
 }
 
 .navigation__list-item {
@@ -62,13 +63,17 @@ html {
     line-height: 50px; /* 250% */;
     color: #FFF;
     text-decoration: none;
-    list-style: none;
 }
 
 .user {
     flex-shrink: 0;
     margin-left: 40px;
     cursor: pointer;
+}
+
+.user:hover {
+    opacity: 75%;
+    transition: 0.7s;
 }
 
 .welcome {
@@ -137,7 +142,7 @@ html {
 .photo-slider__slides-wrapper {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .photo-slider__item {
@@ -147,7 +152,7 @@ html {
 
 .photo-slider__dots-wrapper {
     display: flex;
-    width: 84px;
+    justify-content: center;
     margin: 35px auto;
 }
 
@@ -155,16 +160,15 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:26px;
+    width: 26px;
     height: 26px;
     background-color: #FFF;
     cursor: pointer;
     border-radius: 100%;
-    cursor: pointer;
 }
 
 .photo-slider__dot-btn {
-    width:16px;
+    width: 16px;
     height: 16px;
     background-color: #0C0C0E;
     cursor: pointer;
@@ -196,10 +200,11 @@ html {
     justify-content: flex-start;
     position: relative;
     right: 5px;
-    margin-top: 34px;
+    margin-top: 35px;
 }
 
 .favorites__filter {
+    display: flex;
     width: 130px;
     padding: 5px;
 }
@@ -217,6 +222,8 @@ html {
 }
 
 .favorites__filter-text {
+    display: block;
+    padding-left: 20px;
     cursor: pointer;
     font-size: 20px;
     font-family: Inter;
@@ -225,17 +232,31 @@ html {
     color: #000;
 }
 
-.favorites__filters-input[type='radio'] {
-    stroke-width: 2px;
-    stroke: #000;
+.favorites__filter-input[type='radio'] {
+    appearance: none;
     width: 17px;
     height: 17px;
     margin-top: 5px;
-    margin-right: 17px;
     cursor: pointer;
 }
 
-.favorites__filters-input[type='radio']:checked + .favorites__filter-text {
+.favorites__filter-input[type='radio']:before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    padding: 3px;
+    border: 2px solid #000;
+    border-radius: 100%;
+}
+
+
+.favorites__filter-input[type='radio']:checked:before {
+    background-color: #000;
+    background-clip: content-box;
+}
+
+.favorites__filter-input[type='radio']:checked + .favorites__filter-text {
     font-weight: 700;
 }
 
@@ -244,7 +265,7 @@ html {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 40px;
-    margin-top: 33px;
+    margin-top: 36px;
 }
 
 .book-card {
@@ -331,8 +352,6 @@ html {
     top: 228px;
     left: 20px;
     width: 75px;
-    border-radius: 2px;
-    border: 1px solid #0C0C0E;
     height: 30px;
     background-color: #FFF;
     cursor: pointer;
@@ -346,7 +365,6 @@ html {
     color: #0C0C0E;
     text-align: center;
     letter-spacing: 1px;
-    cursor: pointer;
 }
 
 .book-card__btn_own {
@@ -538,7 +556,7 @@ html {
 .find-card__form {
     width: 600px;
     height: 386px;
-    margin-top: 30px;
+    margin-top: 28px;
     padding: 20px 20px 30px;
     border: 3px solid #BB945F;
 }
@@ -591,7 +609,7 @@ html {
 .find-card__form-btn {
     display: block;
     margin: 0 auto;
-    margin-top: 16px;
+    margin-top: 17px;
     padding: 10px 40px;
     background-color: #FFF;
     cursor: pointer;
@@ -690,10 +708,16 @@ html {
 .footer__icons-list {
     display: inline-flex;
     margin-top: 18px;
+    list-style: none;
 }
 
 .footer__icon {
-    margin-right: 12px;
+    margin-right: 15px;
+}
+
+.footer__icon:hover {
+   opacity: 75%;
+   transition: 0.7s;
 }
 
 .footer__upper-wrapper-right {
