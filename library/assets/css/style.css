@@ -66,9 +66,13 @@ html {
 }
 
 .user {
+    width: 28px;
+    height: 28px;
     flex-shrink: 0;
     margin-left: 40px;
     cursor: pointer;
+    border: none;
+    background: url('../img/icons/icon_profile.svg') center center/cover no-repeat;
 }
 
 .user:hover {
@@ -78,11 +82,19 @@ html {
 
 .burger-menu {
     display: none;
+    background: #000;
+    border: none;
     margin-left: 40px;
     cursor: pointer;
 }
 
+.burger-menu:hover {
+    opacity: 75%;
+    transition: 0.7s;
+}
+
 .burger-menu__line {
+    display: block;
     width: 45px;
     height: 1px;
     background-color: #FFFFFF;
@@ -95,7 +107,7 @@ html {
 .welcome {
     height: 600px;
     padding-top: 220px;
-    background: url(../img/welcome-bg.jpg) center center/cover no-repeat;
+    background: #0C0C0E url(../img/welcome-bg.jpg) center center/cover no-repeat;
 }
 
 .welcome__title {
