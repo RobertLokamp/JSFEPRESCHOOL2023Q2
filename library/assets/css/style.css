@@ -344,7 +344,7 @@ html {
     line-height: 40px; /* 266.667% */;
     color: #000;
     text-transform: capitalize;
-    letter-spacing: 1.8px;
+    letter-spacing: 2.0px;
 }
 
 .book-card__btn {
@@ -586,6 +586,7 @@ html {
     margin-left: -2px;
     background: #FFF;
     border-radius: 10px;
+    border: none;
 }
 
 .find-card__form-input:nth-of-type(2) {
@@ -716,8 +717,8 @@ html {
 }
 
 .footer__icon:hover {
-   opacity: 75%;
-   transition: 0.7s;
+    opacity: 75%;
+    transition: 0.7s;
 }
 
 .footer__upper-wrapper-right {
