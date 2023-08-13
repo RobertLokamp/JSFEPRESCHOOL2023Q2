@@ -943,3 +943,18 @@ html {
         margin-top: 40px;
     }
 }
+
+@media (max-width: 767px) {
+    .favorites__filter:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .contacts__map {
+        width: 100%;
+        height: 100%;
+    }
+
+    .photo-slider__slides-wrapper {
+        gap: 40px;
+    }
+}
