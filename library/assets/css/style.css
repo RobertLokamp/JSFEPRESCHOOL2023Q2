@@ -2,16 +2,20 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* .main-container {
-    width: 1440px;
+.main-container {
+    overflow: hidden;
+    max-width: 1440px;
     margin: 0 auto;
-} */
+    width: 100%;
+    position: relative;
+}
 
 .footer-links:hover,
 .navigation__list-item:hover {
@@ -72,6 +76,7 @@ html {
     margin-left: 40px;
     cursor: pointer;
     border: none;
+    outline: none;
     background: url('../img/icons/icon_profile.svg') center center/cover no-repeat;
 }
 
@@ -82,10 +87,14 @@ html {
 
 .burger-menu {
     display: none;
+    width: 45px;
+    height: 20px;
     background: #000;
     border: none;
+    outline: none;
     margin-left: 40px;
     cursor: pointer;
+    position: relative;
 }
 
 .burger-menu:hover {
@@ -94,14 +103,34 @@ html {
 }
 
 .burger-menu__line {
-    display: block;
+    background-color: #FFF;
+    position: absolute;
     width: 45px;
     height: 1px;
-    background-color: #FFFFFF;
+    right: 2px;
+    transition: background-color 0.5s, opacity 0.25s, transform 0.5s;
+    will-change: transform;
 }
 
-.burger-menu__line:not(:first-child) {
-    margin-top: 10px;
+.burger-menu__line:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.burger-menu__line:nth-child(3) {
+    transform: translateY(10px);
+}
+
+/* Крестик */
+.burger-menu_open .burger-menu__line:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.burger-menu_open .burger-menu__line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu_open .burger-menu__line:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
 }
 
 .welcome {
@@ -180,7 +209,7 @@ html {
 
 .photo-slider__arrow-btn {
     display: none;
-    margin-top: 35px;
+    margin-top: 50px;
     border: none;
     background-color: #FFF;
     cursor: pointer;
@@ -599,6 +628,7 @@ html {
     margin-top: 30px;
     padding: 20px 20px 30px;
     border: 3px solid #BB945F;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .find-card__input-container {
@@ -697,6 +727,7 @@ html {
     display: flex;
     justify-content: end;
     gap: 20px;
+    margin-top: 35px;
 }
 
 .profile-promo__form-btn {
@@ -705,7 +736,6 @@ html {
     align-items: center;
     width: 75px;
     height: 30px;
-    margin-top: 35px;
     padding: 10px 0px;
     background-color: #FFF;
     cursor: pointer;
@@ -800,9 +830,44 @@ html {
     text-align: left;
 }
 
-@media (max-width: 1024px) {
-    .navigation__list {
+@media (max-width: 1439px) {
+    .photo-slider__item:nth-of-type(3) {
         display: none;
+    }
+
+    .photo-slider__dot:nth-child(4) {
+        display: flex;
+    }
+}
+
+@media (max-width: 1280px) {
+    .favorites__cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navigation.burger-menu_open {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+
+    .navigation {
+        position: absolute;
+        right: -350px;
+        top: 90px;
+        width: 350px;
+        background: #0C0C0E;
+        visibility: hidden;
+        transition: transform 0.6s, visibility 0.2s;
+    }
+
+    .navigation__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 107px 100px;
     }
     
     .burger-menu {
@@ -810,7 +875,7 @@ html {
     }
 
     .photo-slider__slides-wrapper {
-        gap: 48px;
+        gap: 56px;
     }
 
     .photo-slider__item:not(:first-of-type) {
@@ -825,13 +890,12 @@ html {
         margin-top: 20px;
     }
 
-    .photo-slider__dot:nth-child(4),
     .photo-slider__dot:nth-child(5) {
         display: flex;
     }
 
-    .favorites__cards-wrapper {
-        justify-content: center;
+    .coffee-shop__text {
+        letter-spacing: 1.9px;
     }
 
     .coffee-shop__menu-wrapper {
@@ -876,5 +940,6 @@ html {
     .profile-promo__btns-wrapper {
         display: flex;
         justify-content: center;
+        margin-top: 40px;
     }
 }
