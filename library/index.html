@@ -26,7 +26,12 @@
             <li><a href="#library_card" class="navigation__list-item">Library Card</a></li>
           </ul>
         </nav>
-        <div class="user"><img src="assets/img/icons/icon_profile.svg" alt="user logo"></div>
+        <button class="user"></button>
+        <button class="burger-menu">
+          <span class="burger-menu__line"></span>
+          <span class="burger-menu__line"></span>
+          <span class="burger-menu__line"></span>
+        </button>
     </header>
   
     <main class="main">
@@ -42,13 +47,29 @@
         <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
         <div class="photo-slider">
           <div class="photo-slider__slides-wrapper">
+            <button class="photo-slider__arrow-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M15 7.5L9 12.5L15 17.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
             <img src="./assets/img/slides/first_slide.jpg" alt="fisrt slide" class="photo-slider__item">
             <img src="./assets/img/slides/second_slide.jpg" alt="second slide" class="photo-slider__item">
             <img src="./assets/img/slides/third_slide.jpg" alt="third slide" class="photo-slider__item">
+            <button class="photo-slider__arrow-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M9 17.5L15 12.5L9 7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
           <div class="photo-slider__dots-wrapper">
             <div class="photo-slider__dot">
               <button class="photo-slider__dot-btn photo-slider__dot-btn_active"></button>
+            </div>
+            <div class="photo-slider__dot">
+              <button class="photo-slider__dot-btn"></button>
+            </div>
+            <div class="photo-slider__dot">
+              <button class="photo-slider__dot-btn"></button>
             </div>
             <div class="photo-slider__dot">
               <button class="photo-slider__dot-btn"></button>
@@ -319,9 +340,9 @@
         <div class="contacts__wrapper">
           <div class="contacts-info">
             <h3 class="contacts-info__title">For All Library Inquiries:</h3>
-            <p class="contacts-info__text">Please Call <a href="tel:6177302370" class="contacts-info__link">(617) 730-2370</a></p>
-            <p class="contacts-info__text">For TTY Service, Please Call <a href="tel:6177302370" class="contacts-info__link">(617) 730-2370</a></p>
-            <p class="contacts-info__text">Putterham Library: <a href="tel:6177302385" class="contacts-info__link">(617) 730-2385</a></p>
+            <p class="contacts-info__text">Please Call <a href="tel:+16177302370" class="contacts-info__link">(617) 730-2370</a></p>
+            <p class="contacts-info__text">For TTY Service, Please Call <a href="tel:+16177302370" class="contacts-info__link">(617) 730-2370</a></p>
+            <p class="contacts-info__text">Putterham Library: <a href="tel:+16177302385" class="contacts-info__link">(617) 730-2385</a></p>
             <h3 class="contacts-info__title">Senior Staff</h3>
             <p class="contacts-info__text">Library Director: <a href="mailto:AmandaHirst@gmail.com" class="contacts-info__link"><b>Amanda Hirst</b></a></p>
           </div>
@@ -349,8 +370,10 @@
           <div class="profile-promo">
             <h3 class="profile-promo__title">Get a reader card</h3>
             <p class="profile-promo__form-text">You will be able to see a reader card after logging into account or you can register a new account</p>
-            <button class="profile-promo__form-btn library-btn">Log in</button>
-            <button class="profile-promo__form-btn library-btn">Sign Up</button>
+            <div class="profile-promo__btns-wrapper">
+              <button class="profile-promo__form-btn library-btn">Log in</button>
+              <button class="profile-promo__form-btn library-btn">Sign Up</button>
+            </div>
           </div>
         </div>
       </section>
