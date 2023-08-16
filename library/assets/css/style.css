@@ -944,6 +944,12 @@ html {
     }
 }
 
+@media (max-width: 768px) {
+    .welcome {
+        background: #0C0C0E url(../img/welcome-bg-768.jpg) center center/cover no-repeat;
+    }
+}
+
 @media (max-width: 767px) {
     .favorites__filter:not(:last-child) {
         margin-right: 30px;
