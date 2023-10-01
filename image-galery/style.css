@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.header {
+    padding: 20px;
+    background-color: coral;
+    border-bottom: 10px solid black;
+}
+
+.header__title {
+    margin-right: auto;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__input-wrapper {
+    position: relative;
+}
+
+.header__input {
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.header__search-btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    width: 52px;
+    height: 72px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.3s;
+}
+
+.header__search-btn:active {
+    opacity: 0.6;
+  }
+
+.header__search-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.header__clear-btn {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    right: 6px;
+    top: 18px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.header__input:not(:placeholder-shown) + .header__clear-btn {
+    display: block;
+  }
+  
+
+.clear-btn__line {
+    background-color: black;
+    position: absolute;
+    width: 36px;
+    height: 1px;
+    right: 1px;
+}
+
+.clear-btn__line:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.clear-btn__line:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.main {
+    background-color: blanchedalmond;
+    padding: 50px 10px;
+    min-height: 1024px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.img-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.img-gallery__item {
+    object-fit: cover;
+    max-width: 400px;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    height: 80px;
+    background-color: coral;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 10px solid black;
+}
+
+.footer-item {
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+a.footer-item {
+    color: black;
+}
+
+a.footer-item:hover {
+    opacity: 70%;
+    transition: 0.7s;
+}
+
+.school-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.school-logo:hover {
+    opacity: 70%;
+    transition: 0.7s;
+}
