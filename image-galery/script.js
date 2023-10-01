@@ -22,7 +22,6 @@ async function fetchImages(query = 'photo') {
         const response = await fetch(url);
         const data = await response.json();
         let photos = data.results;
-        console.log('data', photos);
         await showImages(photos);
     } catch (error) {
         console.log(error);
@@ -51,3 +50,11 @@ clearBtn.addEventListener('click', () => {
 fetchImages();
 
 input.focus();
+
+console.log('Score:', 
+`
+Вёрстка +10
+При загрузке приложения на странице отображаются полученные от API изображения +10
+Если в поле поиска ввести слово и отправить поисковый запрос, на странице отобразятся изображения соответствующей тематики, если такие данные предоставляет API +10
+Поиск +30
+`)
