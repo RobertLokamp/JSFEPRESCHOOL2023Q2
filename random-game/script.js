@@ -4,14 +4,17 @@ const startBtn = document.querySelector('.start-btn');
 const ratingBtn = document.querySelector('.rating-btn');
 const time = document.querySelector('.timer-time');
 const gameContainer = document.querySelector('.game-container');
+const rating = document.querySelector('.rating');
+const ratingTable = document.querySelector('.rating__table');
 const cardValues = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
+let results = JSON.parse(localStorage.getItem("results")) || [];
 let isGameStart = false;
 let turnedCards = [];
+let foundPairs = 0;
 let timer;
 let seconds = 0;
 let minutes = 0;
-
 
 function shuffleCardsValue(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -47,6 +50,7 @@ function clickedCard(e) {
             if (cardValues.length / 2 === foundPairs) {
                 stopTimer();
                 alert(`You win! Your time is ${time.textContent}`);
+                saveResult();
             }
         
         } else {
@@ -84,7 +88,34 @@ function stopTimer() {
     clearInterval(timer);
 }
 
+function saveResult() {
+    results.unshift(time.textContent);
+    results = results.slice(0, 10);
+    localStorage.setItem('results', JSON.stringify(results));
+}
+
+function toggleRating() {
+    rating.classList.toggle('rating_show');
+    gameContainer.classList.toggle('game-container_hidden');
+}
+
+ratingBtn.addEventListener('click', () => {
+    toggleRating();
+    ratingTable.innerHTML = '';
+    results.forEach((result, index) => {
+        const resultElement = document.createElement("p");
+
+        resultElement.classList.add('rating__table-item');
+        resultElement.innerHTML = `Game ${index + 1}: ${result}`;
+        ratingTable.appendChild(resultElement);
+    });
+
+});
+
 function game() {
+    if (document.querySelector('.rating_show')) {
+        toggleRating()
+    }
     isGameStart = true;
     shuffleCardsValue(cardValues);
     startTimer();
@@ -92,6 +123,7 @@ function game() {
         card.addEventListener('click', clickedCard);
     });
 }
+
 
 shuffleCardsValue(cardValues);
 cards.forEach((card) => {
