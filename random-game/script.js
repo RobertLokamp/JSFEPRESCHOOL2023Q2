@@ -49,8 +49,11 @@ function clickedCard(e) {
 
             if (cardValues.length / 2 === foundPairs) {
                 stopTimer();
-                alert(`You win! Your time is ${time.textContent}`);
-                saveResult();
+                setTimeout(() => {
+                    alert(`You win! Your time is ${time.textContent}`);
+                    saveResult();
+                    isGameStart = false;
+                }, 260);
             }
         
         } else {
@@ -116,6 +119,10 @@ function game() {
     if (document.querySelector('.rating_show')) {
         toggleRating()
     }
+    cards.forEach((item) => {
+        item.classList.remove('card_turned');
+        item.textContent = '';
+    });
     isGameStart = true;
     shuffleCardsValue(cardValues);
     startTimer();
