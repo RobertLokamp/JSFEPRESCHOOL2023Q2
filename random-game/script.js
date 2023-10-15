@@ -2,11 +2,15 @@ const cardsWrp = document.querySelector('.card-wrp');
 const cards = document.querySelectorAll('.card');
 const startBtn = document.querySelector('.start-btn');
 const ratingBtn = document.querySelector('.rating-btn');
+const time = document.querySelector('.timer-time');
 const gameContainer = document.querySelector('.game-container');
 const cardValues = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 let isGameStart = false;
 let turnedCards = [];
+let timer;
+let seconds = 0;
+let minutes = 0;
 
 
 function shuffleCardsValue(arr) {
@@ -23,6 +27,7 @@ function shuffleCardsValue(arr) {
 function clickedCard(e) {
     if (!isGameStart) {
         isGameStart = true;
+        startTimer();
     }
     const card = e.target;
 
@@ -38,6 +43,11 @@ function clickedCard(e) {
         if (turnedCards[0].dataset.value === turnedCards[1].dataset.value) {
             foundPairs++;
             turnedCards = [];
+
+            if (cardValues.length / 2 === foundPairs) {
+                stopTimer();
+                alert(`You win! Your time is ${time.textContent}`);
+            }
         
         } else {
             setTimeout(() => {
@@ -51,9 +61,33 @@ function clickedCard(e) {
     }
 }
 
+function startTimer() {
+    stopTimer();
+    seconds = 0;
+    minutes = 0;
+    
+    timer = setInterval(updateTimer, 1000);
+}
+
+function updateTimer() {
+    seconds++;
+  
+    if (seconds === 60) {
+      seconds = 0;
+      minutes++;
+    }
+  
+    time.innerHTML = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+  
+function stopTimer() {
+    clearInterval(timer);
+}
+
 function game() {
     isGameStart = true;
     shuffleCardsValue(cardValues);
+    startTimer();
     cards.forEach((card) => {
         card.addEventListener('click', clickedCard);
     });
