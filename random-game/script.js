@@ -70,6 +70,7 @@ function clickedCard(e) {
 
 function startTimer() {
     stopTimer();
+    time.innerHTML = '00:00'
     seconds = 0;
     minutes = 0;
     
@@ -125,6 +126,7 @@ function game() {
     });
     isGameStart = true;
     shuffleCardsValue(cardValues);
+
     startTimer();
     cards.forEach((card) => {
         card.addEventListener('click', clickedCard);
