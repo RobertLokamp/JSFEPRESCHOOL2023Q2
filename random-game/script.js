@@ -8,7 +8,7 @@ const rating = document.querySelector('.rating');
 const ratingTable = document.querySelector('.rating__table');
 const cardValues = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
-let results = JSON.parse(localStorage.getItem("results")) || [];
+let results = JSON.parse(localStorage.getItem("results-of-memory-game")) || [];
 let isGameStart = false;
 let turnedCards = [];
 let foundPairs = 0;
@@ -95,7 +95,7 @@ function stopTimer() {
 function saveResult() {
     results.unshift(time.textContent);
     results = results.slice(0, 10);
-    localStorage.setItem('results', JSON.stringify(results));
+    localStorage.setItem('results-of-memory-game', JSON.stringify(results));
 }
 
 function toggleRating() {
